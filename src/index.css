@@ -46,23 +46,23 @@
   --color-on-error-container: #93000a;
   --color-on-secondary-fixed-variant: #364a51;
   --color-on-primary-fixed-variant: #832611;
-  --color-success-growth: #56876D;
+  --color-success-growth: #56876d;
   --color-surface-bright: #fff8f6;
   --color-on-error: #ffffff;
   --color-tertiary-container: #00a99a;
   --color-surface-tint: #a33d26;
   --color-error-container: #ffdad6;
-  --color-accent-dark: #27213C;
+  --color-accent-dark: #27213c;
   --color-on-tertiary-fixed-variant: #005048;
-  --color-text-primary: #27213C;
+  --color-text-primary: #27213c;
   --color-inverse-on-surface: #ffede9;
-  --color-background-main: #FEFFFE;
+  --color-background-main: #fefffe;
   --color-outline: #8a716c;
   --color-on-primary-fixed: #3d0600;
   --color-surface-container-high: #f9e4df;
   --color-inverse-surface: #3a2e2b;
   --color-surface-container-highest: #f3ded9;
-  --color-border-subtle: #C0D6DF;
+  --color-border-subtle: #c0d6df;
   --color-surface-container-low: #fff0ed;
 
   --radius: 1rem;
@@ -76,7 +76,7 @@
   --spacing-container-padding-desktop: 32px;
   --spacing-base: 8px;
   --spacing-stack-md: 24px;
-  
+
   --text-body-base: 16px;
   --text-body-base--line-height: 1.6;
   --text-body-base--font-weight: 400;
@@ -101,14 +101,82 @@
 }
 
 @layer base {
+  :root[data-theme='dark'] {
+    --color-on-surface: #f3ded9;
+    --color-on-surface-variant: #d8c2bc;
+    --color-background: #1d1412;
+    --color-surface: #1d1412;
+    --color-surface-container: #2a1f1d;
+    --color-surface-container-low: #241917;
+    --color-surface-container-high: #332725;
+    --color-surface-container-highest: #3d302d;
+    --color-surface-bright: #3d302d;
+    --color-surface-dim: #17100f;
+    --color-background-main: #17100f;
+    --color-text-primary: #f3ded9;
+    --color-text-secondary: rgba(243, 222, 217, 0.82);
+    --color-text-muted: rgba(243, 222, 217, 0.65);
+    --color-border-subtle: #4a3a37;
+    --color-primary-container: #ffb4a3;
+    --color-on-primary-container: #610f00;
+    --color-primary: #ec7357;
+    --color-secondary-fixed: #364a51;
+    --color-secondary-fixed-dim: #2c3e45;
+    --color-secondary: #b4cad3;
+    --color-success-growth: #86bc9b;
+    --color-error-container: #5d1a1a;
+    --color-on-error-container: #ffd2cd;
+    --color-inverse-on-surface: #241917;
+    --color-inverse-surface: #f3ded9;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --color-on-surface: #f3ded9;
+      --color-on-surface-variant: #d8c2bc;
+      --color-background: #1d1412;
+      --color-surface: #1d1412;
+      --color-surface-container: #2a1f1d;
+      --color-surface-container-low: #241917;
+      --color-surface-container-high: #332725;
+      --color-surface-container-highest: #3d302d;
+      --color-surface-bright: #3d302d;
+      --color-surface-dim: #17100f;
+      --color-background-main: #17100f;
+      --color-text-primary: #f3ded9;
+      --color-text-secondary: rgba(243, 222, 217, 0.82);
+      --color-text-muted: rgba(243, 222, 217, 0.65);
+      --color-border-subtle: #4a3a37;
+      --color-primary-container: #ffb4a3;
+      --color-on-primary-container: #610f00;
+      --color-primary: #ec7357;
+      --color-secondary-fixed: #364a51;
+      --color-secondary-fixed-dim: #2c3e45;
+      --color-secondary: #b4cad3;
+      --color-success-growth: #86bc9b;
+      --color-error-container: #5d1a1a;
+      --color-on-error-container: #ffd2cd;
+      --color-inverse-on-surface: #241917;
+      --color-inverse-surface: #f3ded9;
+    }
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--color-background-main);
+    color: var(--color-on-background);
+  }
+
+  :where(button, a, input, textarea, select):focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
 }
 
 @utility pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
 @utility pt-safe {
   padding-top: env(safe-area-inset-top);
 }
@@ -116,11 +184,12 @@
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
 .material-symbols-outlined.fill {
   font-variation-settings: 'FILL' 1;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
   background: transparent;
 }

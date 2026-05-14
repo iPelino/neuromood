@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "NeuroMood",
+  "description": "Track daily mood check-ins, reflect on trends, and receive AI-guided wellness suggestions.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

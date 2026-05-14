@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# NeuroMood
 
-# Run and deploy your AI Studio app
+NeuroMood is a wellness-tracking MVP that helps users log daily moods, view emotional trends, and receive gentle AI-powered insights.
 
-This contains everything you need to run your app locally.
+## Key Features
 
-View your app in AI Studio: https://ai.studio/apps/c0b33c78-4a73-4e4a-94e3-b5f69a412206
+- Mood Logger with selectable mood, intensity slider, and note capture
+- Local history timeline with reverse-chronological mood entries
+- AI Insights page powered by Gemini for weekly summaries and one actionable suggestion
+- Personalized settings (display name + theme preference)
+- Light/dark theme support with system default handling
+- PWA manifest and offline fallback page
 
-## Run Locally
+## Local Setup
 
-**Prerequisites:**  Node.js
+### Prerequisites
 
+- Node.js 20+
+- npm
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Installation
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+`GEMINI_API_KEY` is required for the AI Insights page.
+
+## Run the App
+
+```bash
+npm run dev
+```
+
+## Build and Type Check
+
+```bash
+npm run lint
+npm run build
+```
+
+## Deployment / Live App
+
+Add the production URL here once available.

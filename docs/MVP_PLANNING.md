@@ -448,3 +448,21 @@ and use core features offline.
 | L (new) | Configure PWA | Week 3 | `chore` |
 
 **Issues to close** (noise): #3, #5, #6, #7, #9, #10, #12
+
+---
+
+## MVP Palette Reference
+
+| Token | Light | Dark |
+|---|---|---|
+| `--color-primary-container` | `#ec7357` | `#ffb4a3` |
+| `--color-primary` | `#a33d26` | `#ec7357` |
+| `--color-surface` | `#fff8f6` | `#1d1412` |
+| `--color-background-main` | `#fefffe` | `#17100f` |
+| `--color-text-primary` | `#27213c` | `#f3ded9` |
+| `--color-text-secondary` | `rgba(39, 33, 60, 0.8)` | `rgba(243, 222, 217, 0.82)` |
+| `--color-border-subtle` | `#c0d6df` | `#4a3a37` |
+| `--color-success-growth` | `#56876d` | `#86bc9b` |
+| `--color-error-container` | `#ffdad6` | `#5d1a1a` |
+
+These tokens are now the source of truth for MVP styling. New UI work should use token-based classes and avoid hardcoded color values in `src/` components.
